@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".DisplayCodeActivity">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewText1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight="2"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="7dp"
+        android:backgroundTint="@color/white"
+        android:elevation="12dp"
+        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/cardViewText2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:layout_gravity="center"
+            android:id="@+id/img_code"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="New re-generated QR Code \nHold the QR Code to Save it as an Image"
+                android:textAlignment="center"
+                android:textStyle="italic"
+                android:textSize="14sp"
+                android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/txt_code_display"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="www.llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch.co.uk"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:textStyle="bold"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="5dp"
+            app:autoSizeMaxTextSize="30sp"
+            app:autoSizeMinTextSize="19sp"
+            app:autoSizeStepGranularity="2sp"
+            app:autoSizeTextType="uniform"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:textColor="@color/black" />
+
+        </LinearLayout>
+        
+    </androidx.cardview.widget.CardView>
+    
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewText2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight="1.5"
+        android:layout_margin="9dp"
+        app:cardCornerRadius="30dp"
+        android:backgroundTint="#4C4C4C"
+        app:layout_constraintTop_toBottomOf="@id/cardViewText1"
+        app:layout_constraintBottom_toBottomOf="parent">
+        
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_scan_new"
+                android:layout_width="match_parent"
+                android:text="Scan New"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textAllCaps="false"
+                android:textSize="28sp"
+                android:textColor="@color/white"
+                app:icon="@drawable/ic_scan_icon"
+                app:iconGravity="textStart"
+                app:iconSize="40dp"
+                app:iconPadding="10dp"
+                app:iconTint="@color/white"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                app:backgroundTint="@color/black"
+                android:background="@drawable/button_background"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_open_browser"
+                android:layout_width="match_parent"
+                android:text="Open in Browser"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textColor="@color/white"
+                app:backgroundTint="@color/black"
+                app:icon="@drawable/ic_browser"
+                app:iconGravity="textStart"
+                app:iconSize="39dp"
+                app:iconPadding="10dp"
+                app:iconTint="@color/white"
+                android:textAllCaps="false"
+                android:textSize="25sp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/button_background"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_open_webView"
+                android:layout_width="match_parent"
+                android:text="Open in WebView"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textAllCaps="false"
+                android:textSize="25sp"
+                android:textColor="@color/white"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                app:backgroundTint="@color/black"
+                app:icon="@drawable/ic_webview"
+                app:iconSize="40dp"
+                app:iconGravity="textStart"
+                app:iconTint="@color/white"
+                android:background="@drawable/button_background"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_copy_clipboard"
+                android:layout_width="match_parent"
+                app:backgroundTint="@color/black"
+                app:icon="@drawable/ic_copy"
+                app:iconSize="36dp"
+                app:iconGravity="textStart"
+                app:iconPadding="10dp"
+                app:iconTint="@color/white"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:textSize="23sp"
+                android:text="Copy To Clipboard"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/button_background"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        
+    </androidx.cardview.widget.CardView>
+    
+    
+    
+</androidx.constraintlayout.widget.ConstraintLayout>
